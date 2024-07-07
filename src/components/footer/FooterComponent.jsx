@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Footer } from "flowbite-react";
-import logo from "../../assets/SportHubLogo.png";
+import logo from "../../assets/04.jpg";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
 export function FooterComponent() {
@@ -71,10 +71,29 @@ export function FooterComponent() {
 
   return (
     <section>
+      <div className="relative flex items-center justify-center h-[400px]">
+        <img
+          src={logo}
+          alt="Background"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-[#172554] opacity-80"></div>
+        <div className="relative z-10 text-center text-white p-4">
+          <h1 className="text-5xl font-bold mb-4">ស្វែងរកកីឡាផ្សេងទៀត</h1>
+          <p className="text-xl mb-6">
+            ស្វែងរកកីឡាផ្សេងៗទៀតជាច្រើននៅប្រទេសកម្ពុជា!
+          </p>
+          <Link to="/sport-club">
+            <button className="px-24 py-2 bg-white text-[16px] text-black font-semibold rounded-md">
+              ចូលទៅកាន់ !
+            </button>
+          </Link>
+        </div>
+      </div>
       <Footer className="bg-[#172554] rounded-none">
         <div className="w-full text-white">
-          <hr className="mt-14 text-white" />
-          <div className="flex flex-col container mx-auto py-[50px] mb-14 md:flex-row md:justify-between">
+          <hr className="md:mt-14 mt-0 text-white" />
+          <div className="container mx-auto py-10 md:py-12 mb-14 flex flex-col gap-8 md:gap-6 md:flex-row md:justify-between text-center sm:text-left">
             <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 sm:gap-6">
               {titlesList.map((column, columnIndex) => (
                 <div key={columnIndex} className="px-6">
@@ -104,25 +123,25 @@ export function FooterComponent() {
               <h1 className="font-bold underline">Subscriber</h1>
               <input
                 type="text"
-                className="bg-transparent border border-white rounded-md py-[4px] px-3"
+                className="bg-transparent border border-white rounded-md py-2 px-3"
                 placeholder="Enter your email"
               />
-              <button className="bg-white w-full text-black bold rounded-md py-[4px]">
-                Subscriber
+              <button className="bg-white w-full text-black font-semibold rounded-md py-2">
+                Subscribe
               </button>
             </div>
           </div>
-          <hr className="my-1 text-white" />
-          <div className="w-full sm:flex sm:items-center sm:justify-between text-white container mx-auto py-2 mb-1">
+          <hr className="my-4 text-white" />
+          <div className="container mx-auto flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between text-white py-2 mb-1 text-center sm:text-left">
             <Footer.Copyright
               className="text-gray-400 text-[12px]"
               href="#"
               by="SportHub. All rights reserved"
               year={2024}
             />
-            <div className="flex gap-5 text-[12px] items-center text-gray-400">
+            <div className="flex gap-5 text-[12px] items-center text-gray-400 justify-center sm:justify-start">
               <p>Privacy policy</p>
-              <p>Terms & condition</p>
+              <p>Terms & conditions</p>
             </div>
           </div>
         </div>

@@ -83,9 +83,9 @@ export function NavbarComponent() {
         <Navbar
           fluid
           rounded
-          className="fixed top-0 w-11/12 mx-auto rounded-b-lg z-10 backdrop-blur"
+          className="fixed top-0 w-11/12 mx-auto rounded-b-lg z-10 border-none outline-none backdrop-blur bg-transparent"
         >
-          <span className="absolute inset-0 bg-gray-900 opacity-20 blur-[2px] rounded-b-lg -z-10"></span>
+          <span className="absolute inset-0 bg-gray-500 opacity-50 blur-[2px] rounded-b-lg -z-10"></span>
           <Navbar.Brand as={Link} to={list.path}>
             <div className="ml-[7px] opacity-[100%]">
               <img className="w-[40px]" src={logo} alt="SportHub Logo" />
@@ -126,7 +126,7 @@ export function NavbarComponent() {
                   to={list.path}
                   active={list.active}
                   key={index}
-                  className="font-extrabold text-black "
+                  className="font-extrabold text-white"
                 >
                   {list.name}
                 </Navbar.Link>
