@@ -13,6 +13,7 @@ import News from "./page/news/News.jsx";
 import History from "./page/history/History.jsx";
 import Login from "./page/auth/login/Login.jsx";
 import Register from "./page/auth/register/Register.jsx";
+import NewsDetailPage from "./page/news-detail/NewsDetailPage.jsx";
 
 const router = createBrowserRouter([
   {
@@ -47,6 +48,10 @@ const router = createBrowserRouter([
       {
         path: "/history",
         element: <History />,
+      },
+      {
+        path: "/news-detail",
+        element: <NewsDetailPage/>
       },
       // {
       //   path: "/product-detail",

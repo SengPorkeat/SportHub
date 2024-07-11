@@ -1,15 +1,21 @@
 import React from "react";
 import { FaCalendarAlt } from "react-icons/fa";
+import { formatDate } from "../../common/newsUtils";
+
 
 export default function NewsComponent1({
   image,
   title,
   released_date,
   className,
+  handleNewsDetail
 }) {
+
+    const formattedDate = formatDate(released_date);
+
   return (
     <>
-      <div className={`w-full h-auto ${className}`}>
+      <div onClick={handleNewsDetail} className={`w-full h-auto cursor-pointer ${className}`}>
         <div className="relative w-full h-full rounded-xl overflow-hidden group">
           <img
             src={image}
@@ -26,7 +32,7 @@ export default function NewsComponent1({
             </h3>
             <p className="text-sm mb-2 font-light flex items-center">
               <FaCalendarAlt className="inline mr-2 w-[12px] h-[12px]" />
-              {released_date}
+              {formattedDate}
             </p>
           </div>
         </div>
